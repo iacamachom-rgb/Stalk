@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+  <meta name="description" content="STALK — organiza y consulta perfiles públicos de redes sociales de forma responsable.">
+  <title>STALK — Public profile hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">S</span><span>STALK<span class="dot">.</span></span></a>
+    <nav><a href="#buscar">Explorar</a><a href="#guardados">Guardados</a><a href="#acerca">Acerca de</a></nav>
+    <span class="status"><i></i> MODO PÚBLICO</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span></span> SOCIAL PROFILE ORGANIZER</div>
+      <h1>OBSERVA.<br><em>ORGANIZA.</em></h1>
+      <p class="hero-copy">Un solo lugar para consultar enlaces de perfiles públicos y organizar tus referencias sociales.</p>
+      <a class="primary-btn" href="#buscar">EMPEZAR <span>↘</span></a>
+      <div class="hero-stamp">PUBLIC<br>ONLY <b>✳</b></div>
+    </section>
+
+    <section class="search-panel" id="buscar">
+      <div class="section-heading"><div><span class="kicker">01 / EXPLORAR</span><h2>Busca un perfil</h2></div><span class="muted">SIN RASTREO AUTOMÁTICO</span></div>
+      <form id="searchForm">
+        <label for="username">NOMBRE DE USUARIO</label>
+        <div class="search-row"><span class="at">@</span><input id="username" type="text" placeholder="ej. nombredeusuario" autocomplete="off" required><button type="submit">BUSCAR <span>↗</span></button></div>
+        <p class="hint">Busca enlaces públicos. STALK no accede a cuentas privadas ni recopila datos personales.</p>
+      </form>
+      <div class="platforms">
+        <a data-platform="instagram" href="https://www.instagram.com/" target="_blank" rel="noopener">◎ <span>Instagram</span></a>
+        <a data-platform="tiktok" href="https://www.tiktok.com/" target="_blank" rel="noopener">♪ <span>TikTok</span></a>
+        <a data-platform="x" href="https://x.com/" target="_blank" rel="noopener">𝕏 <span>X</span></a>
+        <a data-platform="facebook" href="https://www.facebook.com/" target="_blank" rel="noopener">f <span>Facebook</span></a>
+      </div>
+      <div id="results" class="results" aria-live="polite"></div>
+    </section>
+
+    <section class="saved-section" id="guardados">
+      <div class="section-heading"><div><span class="kicker">02 / TU LISTA</span><h2>Perfiles guardados</h2></div><button id="clearSaved" class="text-btn" type="button">BORRAR TODO ×</button></div>
+      <div id="savedList" class="saved-grid"><div class="empty-state">Aún no has guardado perfiles.<br><span>Haz una búsqueda y añade uno a tu lista.</span></div></div>
+    </section>
+
+    <section class="about" id="acerca">
+      <span class="kicker">03 / USO RESPONSABLE</span><h2>Curiosidad, con límites.</h2>
+      <p>STALK es una herramienta personal para organizar enlaces que ya son públicos. Respeta la privacidad: no intenta iniciar sesión, saltarse restricciones, identificar ubicaciones ni obtener contenido privado.</p>
+    </section>
+  </main>
+  <footer><span>STALK<span class="dot">.</span> © 2026</span><span>HECHO PARA LA WEB · PRIVACIDAD PRIMERO</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
